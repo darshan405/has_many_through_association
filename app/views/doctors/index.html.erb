@@ -1,0 +1,9 @@
+<h1>List of doctor's</h1>
+
+<% @doctors.each do |doctor|%>
+    Name: <a href="<%= doctor_patients_path(doctor.id)%>"><%= doctor.name%></a><br>
+    Email: <%= doctor.email%><br>
+<% end %>
+<hr />
+
+<%= link_to 'Appointments details', appointments_index_path %>

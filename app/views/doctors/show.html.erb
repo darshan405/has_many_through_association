@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example</title>
+</head>
+<body>
+  <h1>Doctor has_many :appointments<br/>
+    Doctor has_many :patients, through: :appointments</h1>
+    <h2>Doctor Name: <%= @d1.name %></h2>
+    <h3>Doctor <%= @d1.name %>'s patients:</h3>
+    <% @d1.patients.each do |patient|%>
+      Name: <%= patient.name%><br>
+      Email: <%= patient.email%><br>
+    <% end %>
+    <br />
+    <hr />
+    <hr />
+    <h1>Patient has_many :appointments<br/>
+      Patient has_many :doctors, through: :appointments</h1>
+      <h2>Patient Name: <%= @p1.name %></h2>
+      <h3>List of Doctors Available:</h3>
+      <% @p1.doctors.each do |doctor|%>
+      Name: <%= doctor.name%><br>
+      Email: <%= doctor.email%><br>
+    <% end %>
+    <h2>Patient Name: <%= @p2.name %></h2>
+      <h3>List of Doctors Available:</h3>
+      <% @p2.doctors.each do |doctor|%>
+      Name: <%= doctor.name%><br>
+      Email: <%= doctor.email%><br>
+    <% end %>
+    <h2>Patient Name: <%= @p3.name %></h2>
+      <h3>List of Doctors Available:</h3>
+      <% @p3.doctors.each do |doctor|%>
+      Name: <%= doctor.name%><br>
+      Email: <%= doctor.email%><br>
+    <% end %>
+    <h2>Patient Name: <%= @p4.name %></h2>
+      <h3>List of Doctors Available:</h3>
+      <% @p4.doctors.each do |doctor|%>
+      Name: <%= doctor.name%><br>
+      Email: <%= doctor.email%><br>
+    <% end %>
+    <h2>Patient Name: <%= @p5.name %></h2>
+      <h3>List of Doctors Available:</h3>
+      <% @p5.doctors.each do |doctor|%>
+      Name: <%= doctor.name%><br>
+      Email: <%= doctor.email%><br>
+    <% end %>
+      <hr/>
+      <hr/>
+      <h1>Appointment belongs_to :doctor<br/>
+        Appointment  belongs_to :patient</h1>
+        <h4>Doctor: <%= @a1.doctor.name%></h4>
+        <h4>Patient: <%= @a1.patient.name%></h4>
+        <hr />
+        <hr />
+      </body>
+      </html>
